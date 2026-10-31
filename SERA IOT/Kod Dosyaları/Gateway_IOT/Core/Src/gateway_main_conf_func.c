@@ -327,7 +327,6 @@ void USART_2_Config() {
     GPIOA->AFR[0] |=  ((7  << (2 * 4)) | (7  << (3 * 4)));
 
     USART2->CR1 = 0;
-    USART2->CR1 |= (1 << 15);
     USART2->CR1 |= (1 << 4); // IDLE Interrupt
 
     USART2->CR2 = 0;
@@ -336,7 +335,7 @@ void USART_2_Config() {
     USART2->CR3 |= (1 << 6); // DMAR
     USART2->GTPR = 0;
 
-    USART2->BRR = (546 << 4) | 14;
+    USART2->BRR = (273 << 4) | 7;
 
     USART2->CR1 |= (1 << 2);  // RE
     USART2->CR1 |= (1 << 3);  // TE
