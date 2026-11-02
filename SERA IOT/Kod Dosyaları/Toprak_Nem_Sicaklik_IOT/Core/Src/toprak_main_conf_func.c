@@ -321,6 +321,7 @@ void ADC_Config() {
 	ADC1->SQR3 &= ~(31 << 0);
 
 	ADC->CCR = 0;
+	ADC->CCR |= (1 << 16);
 
 	ADC1->CR2 |= (1 << 0);
 
